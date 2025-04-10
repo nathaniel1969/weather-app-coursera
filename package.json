@@ -6,13 +6,13 @@
   "license": "ISC",
   "type": "module",
   "main": "scripts/app.js",
-  "homepage": "https://nathaniel1969.github.io/weather-app-coursera", // Replace <your-github-username> with your GitHub username
+  "homepage": "https://nathaniel1969.github.io/weather-app-coursera",
   "scripts": {
     "start": "live-server --open=index.html",
     "lint": "eslint scripts/*.js",
-    "clean": "rm -rf dist && rm -rf node_modules", // Clean cache and dependencies
-    "build": "mkdir -p dist && cp -r index.html styles scripts data icons dist", // Build the app into the dist folder
-    "deploy": "npm run build && gh-pages -d dist", // Build and deploy to GitHub Pages
+    "clean": "rm -rf dist && rm -rf node_modules",
+    "build": "mkdir -p dist && cp -r index.html styles scripts data icons dist",
+    "deploy": "npm run build && gh-pages -d dist",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "devDependencies": {
