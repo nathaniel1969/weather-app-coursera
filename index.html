@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-  <header>
-    <h1>European Weather Forecast</h1>
-    <h2>Powered by 7Timer!</h2>
-  </header>
-  <main>
-    <section id="city-selection">
-      <label for="city-dropdown">Select a city:</label>
-      <select id="city-dropdown">
-        <option value="" disabled selected>Choose a city</option>
-      </select>
-    </section>
-    <section id="weather-info">
-      <h2>Weather Information</h2>
-      <div id="weather-details"></div>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 Weather App</p>
-  </footer>
-  <script src="scripts/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <h1>European Weather Forecast</h1>
+      <h2>Powered by 7Timer!</h2>
+    </header>
+    <main role="main">
+      <section id="city-selection" aria-labelledby="city-selection-label">
+        <label id="city-selection-label" for="city-dropdown">Select a city:</label>
+        <select id="city-dropdown" aria-label="City Dropdown">
+          <option value="" disabled selected>Choose a city</option>
+        </select>
+        <label id="unit-toggle-label" for="unit-toggle" class="toggle-label">
+          <input
+            type="checkbox"
+            id="unit-toggle"
+            aria-label="Toggle between Imperial and Metric units"
+          />
+          <span class="slider"></span>
+          <span class="unit-label">Imperial</span>
+        </label>
+      </section>
+      <section id="weather-info" aria-labelledby="weather-info-heading">
+        <h2 id="weather-info-heading">Weather Information</h2>
+        <div id="weather-details" role="region" aria-live="polite">
+          <!-- Weather details will be dynamically populated here -->
+        </div>
+      </section>
+    </main>
+    <footer role="contentinfo">
+      <p>© 2025 Weather App</p>
+    </footer>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>
